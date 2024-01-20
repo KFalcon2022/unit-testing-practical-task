@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'com.walking.lesson125_unit_testing'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+test {
+    useJUnitPlatform()
+}
