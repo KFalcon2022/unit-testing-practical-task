@@ -13,6 +13,7 @@ import com.walking.lesson125_unit_testing.validator.FullNameValidator;
 public class Main {
     private static final FullNameValidator validator = new FullNameValidator();
     private static final FullNameParser parser = new FullNameParser();
+
     public static void main(String[] args) {
         processFullName("Иванов Иван Иванович");
         processFullName("Ivanov Ivan");
