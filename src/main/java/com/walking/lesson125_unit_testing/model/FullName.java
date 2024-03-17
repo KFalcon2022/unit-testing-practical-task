@@ -1,5 +1,7 @@
 package com.walking.lesson125_unit_testing.model;
 
+import java.util.Objects;
+
 public class FullName {
     private String name;
     private String surname;
@@ -36,6 +38,27 @@ public class FullName {
 
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        FullName fullName = (FullName) o;
+        return Objects.equals(name, fullName.name)
+                && Objects.equals(surname, fullName.surname)
+                && Objects.equals(patronymic, fullName.patronymic);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, patronymic);
     }
 
     @Override
